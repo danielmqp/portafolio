@@ -1,3 +1,4 @@
 # portafolio
-Portafolio personal dónde demuestro mis capacidades en diseño y desarrollo web.
+
+Página personal con información profesional y capacidades en desarrollo y diseño web.
 
