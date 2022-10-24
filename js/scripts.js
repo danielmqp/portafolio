@@ -44,7 +44,7 @@
       {
         scrollTop: scrollDistance + "px",
       },
-      500
+      300
     );
   });
 
@@ -81,6 +81,15 @@
     });
   });
 
+  function parallax() {
+    var s = document.getElementById("floater");
+    var yPos = 0 - window.pageYOffset / 5;
+    s.style.top = 50 + yPos + "%";
+  }
+
+  window.addEventListener("scroll", function () {
+    parallax();
+  });
   // Open mobile menu
   $("#mobile-menu-open").click(function () {
     $("header, body").addClass("active");
