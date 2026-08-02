@@ -313,7 +313,33 @@
         import { createChat } from 'https://cdn.jsdelivr.net/npm/@n8n/chat/dist/chat.bundle.es.js';
 
         createChat({
-            webhookUrl: 'https://spartan127.app.n8n.cloud/webhook/8dd1d523-70a4-4525-94c7-9164c0e2c5da/chat'
+            webhookUrl: 'https://spartan127.app.n8n.cloud/webhook/8dd1d523-70a4-4525-94c7-9164c0e2c5da/chat',
+            webhookConfig: {
+                method: 'POST',
+                headers: {}
+            },
+            target: '#n8n-chat',
+            mode: 'window',
+            chatInputKey: 'chatInput',
+            chatSessionKey: 'sessionId',
+            loadPreviousSession: true,
+            metadata: {},
+            showWelcomeScreen: false,
+            defaultLanguage: 'en',
+            initialMessages: [
+                'Mucho gusto! 👋',
+                'Mi nombre es Dabot. ¿Cómo te puedo ayudar?'
+            ],
+            i18n: {
+                en: {
+                    title: 'Hola! 👋',
+                    subtitle: "Inicia un chat. Estamos aquí para ayudarte 24/7.",
+                    footer: '',
+                    getStarted: 'Nueva conversación',
+                    inputPlaceholder: 'Escribe tu consulta..',
+                },
+            },
+            enableStreaming: false,
         });
     </script>
 </body>
